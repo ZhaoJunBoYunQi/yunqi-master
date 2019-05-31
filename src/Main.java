@@ -34,5 +34,7 @@ public class Main {
         }.start();
     }
 
+    private static class ss{}
+
 
 }
