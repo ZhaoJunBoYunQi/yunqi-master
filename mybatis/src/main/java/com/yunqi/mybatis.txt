@@ -1,0 +1,6 @@
+org.apache.ibatis.session.SqlSessionFactoryBuilder.build(java.io.InputStream)
+->org.apache.ibatis.builder.xml.XMLConfigBuilder
+  ->org.apache.ibatis.builder.xml.XMLConfigBuilder.build
+    ->org.apache.ibatis.builder.xml.XMLConfigBuilder.environmentsElement
+
+       ->org.apache.ibatis.builder.BaseBuilder.resolveAlias
