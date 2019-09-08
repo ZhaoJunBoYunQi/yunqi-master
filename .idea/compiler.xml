@@ -16,12 +16,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="designPattern" />
         <module name="multiThread" />
         <module name="mybatis" />
         <module name="spring" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="designPattern" target="1.8" />
       <module name="multiThread" target="1.8" />
       <module name="mybatis" target="1.8" />
       <module name="spring" target="1.8" />
@@ -29,6 +31,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="designPattern" options="-parameters" />
       <module name="multiThread" options="-parameters" />
       <module name="mybatis" options="-parameters" />
       <module name="spring" options="-parameters" />
