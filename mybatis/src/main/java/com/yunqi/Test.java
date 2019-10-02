@@ -11,6 +11,7 @@ import org.springframework.boot.SpringApplication;
 import java.io.IOException;
 import java.io.InputStream;
 import java.security.PrivateKey;
+import java.util.HashMap;
 
 /**
  * @author: yunqi
@@ -36,6 +37,7 @@ public class Test {
     }
 
     public static void test(String[] args) throws Exception {
+        HashMap hashMap = new HashMap();
         YQDao yqDao;
         String resource ="mybatis/mybatis-config.xml";
         InputStream inputStream = Resources.getResourceAsStream(resource);

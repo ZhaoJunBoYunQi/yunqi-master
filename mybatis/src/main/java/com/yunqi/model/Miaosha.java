@@ -1,4 +1,4 @@
-package com.yunqi.Model;
+package com.yunqi.model;
 
 /**
  * @author: yunqi
