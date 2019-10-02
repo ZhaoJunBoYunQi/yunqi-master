@@ -14,7 +14,25 @@ public class Sort {
         }
         System.out.println();
     }
-
+    //快排
+    public static int quickSort(int[]arr, int n, int target) {
+        int l = 0;
+        int r = n - 1;
+        //区间[l,r]l里查找target
+        while (l <= r) {
+            int mid = l + (r - l)/2;
+            if (arr[mid] == mid) {
+                return mid;
+            } else if (target > arr[mid]) {
+                // target 在【mid + 1, r】
+                l = mid + 1;
+            } else {
+                // target 在【l, mid -1】
+                r = mid - 1;
+            }
+        }
+        return -1;
+    }
 
     //冒泡排序
     public static int[] bubbleSort(int[] arr) {
