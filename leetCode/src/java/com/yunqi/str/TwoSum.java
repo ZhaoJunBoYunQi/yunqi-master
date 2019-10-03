@@ -1,22 +1,49 @@
 
 package com.yunqi.str;
 
+import java.util.HashSet;
+import java.util.Set;
 /**
  * @author: yunqi
  * @createdTime: 2019-10-03
  * 描述
+ * 字符集大小写是否敏感，只有字母？数字加字母？ASCII，字符集？
+ * 子串，子序列？子数组？（后2个可以不连续）
+ * 返回一个值，若没有值返回“”或者null，0
  */
 public class TwoSum {
 
     public static void main(String[] args) {
         int[] twoSum = twoSum(new int[]{2, 7, 11,15},9);
-        for (int i: twoSum) {
-            System.out.println(i);
-        }
+        Set<Integer> set = new HashSet<>();
+        set.add(2);
+        boolean contains = set.contains(3);
+        System.out.println(contains);
     }
+
+    //滑动窗口找最大无重复的子串长度
+    public static int getMaxSubStr(String s) {
+        int l = 0, r = -1;
+        int res = 0;
+        //存放字母的频率
+        int[] fre = new int[256];
+        int len = s.toCharArray().length;
+        char[] chars = s.toCharArray();
+        while (l < len) {
+            if (r + 1 < len && fre[chars[r+1]] == 0) {
+                //等于++r;   fre[chars[r]]++;
+                fre[chars[++r]]++;
+            }else {
+                fre[chars[l++]]--;
+            }
+            res = Math.max(res, r-l+1);
+        }
+        return res;
+    }
+
     //滑动窗口，求最小连续子数组
     public static int getMinLength(int[] arr, int target) {
-        //每次right向右移动，如果sum《 target，那么则继续移动
+        //每次right向右移动，如果sum < target，那么则继续移动
         //如果sum>target，则l左移，这样就可以缩短l与r之间的值
         int l = 0;
         int r = -1;
@@ -26,7 +53,7 @@ public class TwoSum {
                 r++;
                 sum += arr[r];
             } else {
-                sum -= arr[l];
+                sum -= arr[l];;
                 l++;
             }
             if (sum >= target) {
