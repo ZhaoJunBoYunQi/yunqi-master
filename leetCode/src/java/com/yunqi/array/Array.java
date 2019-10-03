@@ -1,11 +1,11 @@
 package com.yunqi.array;
 
-
-
 /**
  * @author: yunqi
  * @createdTime: 2019-10-02
  * 描述
+ * 子数组和子序列一般不连续，
+ * 子串连续
  */
 public class Array<E> {
     private E[] data;
