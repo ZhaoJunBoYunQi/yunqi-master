@@ -20,15 +20,15 @@ public class MaxHeap<E extends Comparable> {
     public boolean isEmpty() {
         return data.isEmpty();
     }
-    public int getParent(int index) {
+    public int parent(int index) {
         if (index == 0)
             throw new IllegalArgumentException("索引为0， 其没有父节点");
         return (index - 1)/2;
     }
-    public int getLeftChild(int index) {
+    public int leftChild(int index) {
         return 2 * index + 1;
     }
-    public int getRightChild(int index) {
+    public int rightChild(int index) {
         return 2 * index + 2;
     }
 
@@ -38,9 +38,40 @@ public class MaxHeap<E extends Comparable> {
     }
 
     private void siftUp(int k) {
-        while (k > 0 && data.get(getParent(k)).compareTo(data.get(k)) < 0) {
-            data.swap(k, getParent(k));
-            k = getParent(k);
+        while (k > 0 && data.get(parent(k)).compareTo(data.get(k)) < 0) {
+            data.swap(k, parent(k));
+            k = parent(k);
         }
     }
+    public E getMax() {
+        if (data.getSize() == 0)
+            throw new IllegalArgumentException("array is empty");
+        return data.get(0);
+    }
+    //取出堆中的最大元素
+    public E extractMax() {
+        E res = getMax();
+        data.swap(0, data.getSize() - 1);
+        data.removeLast();
+        siftDown(0);
+        return res;
+    }
+
+    private void siftDown(int k) {
+        while (leftChild(k) < data.getSize()) {
+            int i = leftChild(k);
+            int j = i+ 1;
+            if (j < data.getSize() && data.get(j).compareTo(data.get(i)) <0) {
+                //data[j - 1]是leftChild 和 rightChild的最大值
+                i = rightChild(k);
+            }
+            if (data.get(k).compareTo(data.get(i)) >= 0)
+                break;;
+            data.swap(i, k);
+            k = j;
+        }
+
+    }
+
+
 }

@@ -13,7 +13,23 @@ public class ListDemo {
         int f = fun(5);
         System.out.println(f);
     }
+    //链表翻转
 
+    public ListNode reverseListNode(ListNode head) {
+        ListNode pre = null;
+        ListNode cur = head;
+        while (cur != null) {
+            //获取当前节点的下一个节点
+            ListNode next = cur.next;
+            //将点前节点翻转指向pre
+            cur.next = pre;
+            //pre节点指向当前节点
+            pre = cur;
+            //当前节点下移一位
+            cur = next;
+        }
+        return pre;
+    }
     /**
      * 这样可以当找到f（n） 如果有，可以重复利用已经查过的，避免多次占用内存
      * 变态青蛙跳台阶，一次跳一个，或者一次跳2个台阶

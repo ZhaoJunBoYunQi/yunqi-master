@@ -1,6 +1,7 @@
 
 package com.yunqi.str;
 
+import java.lang.annotation.ElementType;
 import java.util.HashSet;
 import java.util.Set;
 /**
@@ -20,6 +21,33 @@ public class TwoSum {
         boolean contains = set.contains(3);
         System.out.println(contains);
     }
+   //求两个字符串的最长公共子串
+    public static String getDupSubStr(String str1, String str2) {
+        char[] chars1 = str1.toCharArray();
+        char[] chars2 = str2.toCharArray();
+        String res = "";
+        int i = 0;
+        int j = 0;
+        boolean flag = false;
+        while (i < chars1.length) {
+            for (j = 0; j <chars2.length; j++) {
+                if (chars1[i] == chars2[j]) {
+                    flag = true;
+                }
+            }
+            if (flag) {
+                res += chars1[i];
+                i++;
+                j++;
+            }else {
+                j = 0;
+            }
+
+        }
+
+        return null;
+    }
+
 
     //滑动窗口找最大无重复的子串长度
     public static int getMaxSubStr(String s) {
