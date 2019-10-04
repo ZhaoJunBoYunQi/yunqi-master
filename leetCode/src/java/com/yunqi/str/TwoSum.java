@@ -3,7 +3,11 @@ package com.yunqi.str;
 
 import java.lang.annotation.ElementType;
 import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Set;
+import java.util.concurrent.LinkedBlockingDeque;
+
 /**
  * @author: yunqi
  * @createdTime: 2019-10-03
@@ -15,11 +19,8 @@ import java.util.Set;
 public class TwoSum {
 
     public static void main(String[] args) {
-        int[] twoSum = twoSum(new int[]{2, 7, 11,15},9);
-        Set<Integer> set = new HashSet<>();
-        set.add(2);
-        boolean contains = set.contains(3);
-        System.out.println(contains);
+        System.out.println(Integer.valueOf('a'));
+        Queue<Integer> queue = new LinkedList<>();
     }
    //求两个字符串的最长公共子串
     public static String getDupSubStr(String str1, String str2) {
