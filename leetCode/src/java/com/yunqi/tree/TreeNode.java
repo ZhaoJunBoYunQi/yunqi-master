@@ -21,7 +21,7 @@ public class TreeNode {
         this.value = value;
     }
 }
-class TreeDemo {
+class TreeDemo1 {
     public static void main(String[] args) {
         int i = sumSquares(4);
         System.out.println(i);
