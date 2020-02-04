@@ -4,8 +4,6 @@
     <list default="true" id="dfcd5bd6-eb71-443f-b8f9-cce71d4938b8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/leetCode/src/java/com/yunqi/dp/DpDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/leetCode/src/java/com/yunqi/dp/DpDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetCode/src/java/com/yunqi/list/ListDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/leetCode/src/java/com/yunqi/list/ListDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetCode/src/java/com/yunqi/tree/TreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/leetCode/src/java/com/yunqi/tree/TreeNode.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/yunqi-multiThread/target/" />
@@ -56,7 +54,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/leetCode/src/java/com/yunqi/str/TwoSum.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-28">
+            <state relative-caret-position="-3332">
               <caret line="22" column="50" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -95,8 +93,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/leetCode/src/java/com/yunqi/dp/DpDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="160" column="17" selection-start-line="160" selection-start-column="17" selection-end-line="160" selection-end-column="17" />
+            <state relative-caret-position="352">
+              <caret line="139" column="4" selection-start-line="139" selection-start-column="4" selection-end-line="139" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -232,9 +230,9 @@
         <option value="$PROJECT_DIR$/leetCode/src/java/com/yunqi/Demo.java" />
         <option value="$PROJECT_DIR$/leetCode/src/java/com/yunqi/sort" />
         <option value="$PROJECT_DIR$/leetCode/src/java/com/yunqi/redBlackTree.txt" />
-        <option value="$PROJECT_DIR$/leetCode/src/java/com/yunqi/str/TwoSum.java" />
         <option value="$PROJECT_DIR$/leetCode/src/java/com/yunqi/list/ListDemo.java" />
         <option value="$PROJECT_DIR$/leetCode/src/java/com/yunqi/tree/TreeNode.java" />
+        <option value="$PROJECT_DIR$/leetCode/src/java/com/yunqi/str/TwoSum.java" />
         <option value="$PROJECT_DIR$/leetCode/src/java/com/yunqi/dp/DpDemo.java" />
       </list>
     </option>
@@ -428,7 +426,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1580737473972" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1580824440155" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -591,7 +589,7 @@
       <workItem from="1577893775905" duration="598000" />
       <workItem from="1580449148933" duration="3518000" />
       <workItem from="1580549417787" duration="18413000" />
-      <workItem from="1580710636102" duration="9156000" />
+      <workItem from="1580710636102" duration="13191000" />
     </task>
     <task id="LOCAL-00001" summary="手写map">
       <created>1557768012569</created>
@@ -677,7 +675,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580626395003</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="增加链表,dp部分题型">
+      <created>1580738230339</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1580738230339</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -689,7 +694,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138002000" />
+    <option name="totallyTimeSpent" value="142037000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -796,7 +801,8 @@
     <MESSAGE value="堆添加" />
     <MESSAGE value="dp" />
     <MESSAGE value="增加链表部分题型" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加链表部分题型" />
+    <MESSAGE value="增加链表,dp部分题型" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加链表,dp部分题型" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1152,16 +1158,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/leetCode/src/java/com/yunqi/str/TwoSum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-28">
-          <caret line="22" column="50" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/leetCode/src/java/com/yunqi/list/ListDemo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2716">
@@ -1206,10 +1202,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/leetCode/src/java/com/yunqi/str/TwoSum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3332">
+          <caret line="22" column="50" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/leetCode/src/java/com/yunqi/dp/DpDemo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="160" column="17" selection-start-line="160" selection-start-column="17" selection-end-line="160" selection-end-column="17" />
+        <state relative-caret-position="352">
+          <caret line="139" column="4" selection-start-line="139" selection-start-column="4" selection-end-line="139" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
