@@ -93,11 +93,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/leetCode/src/java/com/yunqi/dp/DpDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="139" column="4" selection-start-line="139" selection-start-column="4" selection-end-line="139" selection-end-column="4" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="1372">
+              <caret line="88" column="17" lean-forward="true" selection-start-line="88" selection-start-column="17" selection-end-line="88" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://D:/enviorment/jdk/src.zip!/java/util/Arrays.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="274">
+              <caret line="2881" column="23" lean-forward="true" selection-start-line="2881" selection-start-column="23" selection-end-line="2881" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -105,21 +111,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/leetCode/src/java/com/yunqi/sort">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2240">
-              <caret line="80" column="31" selection-start-line="80" selection-start-column="31" selection-end-line="80" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/leetCode/src/java/com/yunqi/array/Array.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2032">
-              <caret line="85" column="21" selection-start-line="85" selection-start-column="15" selection-end-line="85" selection-end-column="21" />
-              <folding>
-                <element signature="e#471#472#0" expanded="true" />
-                <element signature="e#503#504#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="168">
+              <caret line="6" column="36" lean-forward="true" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -364,15 +357,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="yunqi" type="462c0819:PsiDirectoryNode" />
-              <item name="heap" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yunqi-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yunqi-master" type="462c0819:PsiDirectoryNode" />
-              <item name="leetCode" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="yunqi" type="462c0819:PsiDirectoryNode" />
               <item name="list" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -426,7 +410,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1580824440155" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1580888910712" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -589,7 +573,7 @@
       <workItem from="1577893775905" duration="598000" />
       <workItem from="1580449148933" duration="3518000" />
       <workItem from="1580549417787" duration="18413000" />
-      <workItem from="1580710636102" duration="13191000" />
+      <workItem from="1580710636102" duration="20784000" />
     </task>
     <task id="LOCAL-00001" summary="手写map">
       <created>1557768012569</created>
@@ -682,7 +666,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580738230339</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="增加链表,dp部分题型">
+      <created>1580824487559</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1580824487559</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -694,7 +685,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142037000" />
+    <option name="totallyTimeSpent" value="149630000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -862,7 +853,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/designPattern/src/main/java/com/geely/design/pattern/creational/builder/Coach.java" />
     <entry file="file://$PROJECT_DIR$/designPattern/src/main/java/com/geely/design/pattern/creational/builder/CourseBuilder.java" />
     <entry file="file://$PROJECT_DIR$/designPattern/src/main/java/com/geely/design/pattern/creational/builder/CourseActualBuilder.java" />
     <entry file="file://$PROJECT_DIR$/designPattern/src/main/java/com/yunqi/pattern/creational/builder/ActualBuilder.java">
@@ -1151,13 +1141,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/leetCode/src/java/com/yunqi/sort">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2240">
-          <caret line="80" column="31" selection-start-line="80" selection-start-column="31" selection-end-line="80" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/leetCode/src/java/com/yunqi/list/ListDemo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2716">
@@ -1212,13 +1195,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://D:/enviorment/jdk/src.zip!/java/util/Arrays.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="2881" column="23" lean-forward="true" selection-start-line="2881" selection-start-column="23" selection-end-line="2881" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetCode/src/java/com/yunqi/sort">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="6" column="36" lean-forward="true" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/leetCode/src/java/com/yunqi/dp/DpDemo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="139" column="4" selection-start-line="139" selection-start-column="4" selection-end-line="139" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="1372">
+          <caret line="88" column="17" lean-forward="true" selection-start-line="88" selection-start-column="17" selection-end-line="88" selection-end-column="17" />
         </state>
       </provider>
     </entry>

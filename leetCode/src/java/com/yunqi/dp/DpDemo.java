@@ -1,7 +1,6 @@
 package com.yunqi.dp;
 
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 /**
  * @author: yunqi
@@ -31,6 +30,32 @@ public class DpDemo {
         for (int i = 1; i < m; i++) {
             for (int j = 1; j < n; j++) {
                 dp[i][j] = dp[i-1][j] + dp[i][j-1];
+            }
+        }
+        return dp[m-1][n-1];
+    }
+    // leetcode 的第63题
+    // 给定一个包含非负整数的 m x n 网格，请找出一条从左上角到右下角的路径,有障碍物
+    // 有障碍物为1 ，也就是到当前距离为0
+    // 边界值考虑 数组为0或者 列为0
+    public int uniquePathsWithObstacles(int[][] obstacleGrid) {
+        if (obstacleGrid.length == 0 || obstacleGrid[0].length == 0
+                || obstacleGrid[0][0] == 1) {
+            return 0;
+        }
+        int m = obstacleGrid.length;
+        int n = obstacleGrid[0].length;
+        int[][] dp = new int[m][n];
+        dp[0][0] = 1;
+        for (int i = 1; i < m; i++) {
+            dp[i][0] = obstacleGrid[i][0] == 1 ? 0 : dp[i-1][0];
+        }
+        for (int j = 1; j < m; j++) {
+            dp[0][j] = obstacleGrid[0][j] == 1 ? 0 : dp[0][j-1];
+        }
+        for (int i = 1; i < m; i++) {
+            for (int j = 1; j < n; j++) {
+                dp[i][j] = obstacleGrid[i][j] == 1 ? 0 : dp[i-1][j] + dp[i][j-1];
             }
         }
         return dp[m-1][n-1];
@@ -129,6 +154,7 @@ public class DpDemo {
         int max = 1;
         for (int i = 0; i < nums.length; i++) {
             for (int j = 0; j < i; j++) {
+                // 如果 nums[i] > nums[j] 则说明 是一个递增子序列，然后 比较 dp[j] +1与dp[i]的大小
                 if (nums[i] > nums[j]) {
                     dp[i] = Math.max(dp[j] + 1, dp[i]);
                 }
@@ -137,6 +163,47 @@ public class DpDemo {
         }
         return max;
     }
+
+    // 分糖果扫描 从左往右，保证 每个分数大的 糖果多
+    // 同样有可能 左边的分数大的 糖果没有右边的大， 所以 右边的也要扫描一遍
+    // for example 2 3 6 4 5
+    public int candy(int[] ratings) {
+        if(ratings.length==0){
+            return 1;
+        }
+        int n = ratings.length;
+        int[] dp = new int[n];
+        Arrays.fill(dp, 1);
+        int res = 0;
+        for(int i = 1; i <n; i++) {
+            if(ratings[i]> ratings[i-1]){
+                dp[i] = dp[i-1] +1;
+            }
+        }
+        for(int i = n-1; i>0; i--) {
+            if(ratings[i]<ratings[i-1]&&dp[i]>=dp[i-1]){
+                dp[i-1] = dp[i] +1;
+            }
+        }
+        for(int i = 0; i <n; i++) {
+            res +=dp[i];
+        }
+        return res;
+    }
+
+
+
+
+    /**              基本步骤
+     * 1、基本为二维数组，少许为1维数组
+     * 2、dp定义  int[] dp = new int[nums.length] int[][] dp = new int[m][n]
+     *    注意如果如果是数组一般取nums.length,如果是字符串，则需要为length+1
+     * 3、找出 定义转态转移方程条件
+     *    如 str(i) == str(j) or nums[i] > nums[j]
+     * 4、找出 dp[i][j] 与 dp[i][j-1]、dp[i-1][j]、dp[i-1][j-1]
+     *    之间的关系
+     */
+
 
 
 
