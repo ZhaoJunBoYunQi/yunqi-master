@@ -13,9 +13,12 @@ public class Sort {
     public static void main(String[] args) {
         int[] arr = {4,3,5,2,1,3,4,2,3};
         int[] ints = selectSort(arr);
-        for (Integer i: ints) {
-            System.out.println(i);
-        }
+    /*    for (Integer i: ints) {
+          //  System.out.println(i);
+        }*/
+            Object o1 = "12";
+            Object o2 = "12";
+            System.out.println(o1.equals(o2));
         System.out.println();
     }
     //快排
