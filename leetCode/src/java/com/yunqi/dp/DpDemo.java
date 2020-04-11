@@ -12,7 +12,8 @@ import java.util.*;
 public class DpDemo {
 
     public static void main(String[] args) {
-
+        ;
+        System.out.println(longestPalindrome("awdaadw"));
     }
 
    // leetcode 的 62 号题：https://leetcode-cn.com/problems/unique-paths/
@@ -204,31 +205,87 @@ public class DpDemo {
      *    之间的关系
      */
 
-
+    public boolean match(int[][]arr, String destStr) {
+        int n = arr.length;
+        int m = arr[0].length;
+        int[][] dp = new int[n][m];
+        for (int i = 0; i < n; i++) {
+            if (destStr.charAt(0) == arr[i][0]) {
+                dp[i][0] = 1;
+            }
+        }
+        for (int j = 0; j < n; j++) {
+            if (destStr.charAt(0) == arr[0][j]) {
+                dp[0][j] = 1;
+            }
+        }
+        int len = destStr.length();
+        int curLen = 1;
+        int b = 0;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                if (arr[i-1][j] == destStr.charAt(curLen)) {
+                    dp[i][j] = dp[i-1][j-1]+1;
+                    curLen++;
+                }
+                if (arr[i][j-1] == destStr.charAt(curLen)) {
+                    dp[i][j] = dp[i-1][j-1]+1;
+                    curLen++;
+                }
+                if (curLen==len+1) {
+                    b=1;
+                    break;
+                }
+            }
+            if (b==1){
+                break;
+            }
+        }
+        if (b==1) {
+            System.out.println("YES");
+        }
+        return true;
+    }
 
 
 
     // 最长的回文子串
-    public String longestPalindrome(String s) {
+    public static String longestPalindrome(String s) {
         if (s == null || s.length() < 2) {
             return null;
         }
         char[] chars = s.toCharArray();
         StringBuilder sb = new StringBuilder();
-        int[] dp = new int[chars.length];
+        int[] dp = new int[chars.length+1];
+        int res = 0;
+        Arrays.fill(dp,1);
         for (int i = 0; i < chars.length; i++) {
             int temp = i;
-            for (int j = 0; j < temp; j++) {
+     /*      for (int j = 0; j <= temp; j++) {
                 if (chars[j] != chars[temp]) {
                     break;
                 }else {
-                    dp[i] = Math.max(dp[j] + 1, dp[i]);
+                    dp[i] = Math.max(dp[j] + 2, dp[i]);
+                    res = Math.max(dp[i], res);
                     sb.append(chars[j]);
                     temp--;
                 }
-            }
+            }*/
+           int l1 = doPalindrome(s, i, i);
+           int l2 = doPalindrome(s, i, i+1);
+           res = Math.max(res, Math.max(l1, l2));
         }
-        return s;
+        System.out.println(res);
+        return sb.toString();
+    }
+
+    public static int  doPalindrome(String s, int l, int r) {
+        int len = 0;
+        while (r < s.length() && l >= 0 && s.charAt(l) == s.charAt(r)) {
+            l--;
+            r++;
+        }
+        return r - l + 1;
     }
 
 }
