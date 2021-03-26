@@ -1,11 +1,11 @@
 
 package com.yunqi.str;
 
+import com.yunqi.array.Array;
+
 import java.lang.annotation.ElementType;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Set;
+import java.rmi.registry.Registry;
+import java.util.*;
 import java.util.concurrent.LinkedBlockingDeque;
 
 /**
@@ -82,7 +82,7 @@ public class TwoSum {
                 r++;
                 sum += arr[r];
             } else {
-                sum -= arr[l];;
+                sum -= arr[l];
                 l++;
             }
             if (sum >= target) {
@@ -163,4 +163,70 @@ public class TwoSum {
         }
     }
 
+    // 242. 有效的字母异位词
+    public boolean isAnagram(String s, String t) {
+        if (s.length() != t.length()) {
+            return false;
+        }
+        int[] sIndex = new int[26];
+        for (int i = 0; i < t.length(); i++) {
+            sIndex[s.charAt(i) - 'a']++;
+        }
+        for (int i = 0; i < t.length(); i++) {
+            if (sIndex[t.charAt(i) - 'a'] == 0) {
+                return false;
+            }
+            sIndex[t.charAt(i) - 'a']--;
+        }
+        return true;
+    }
+
+    public boolean isAnagram2(String s, String t) {
+        if (s.length() != t.length()) {
+            return false;
+        }
+        int[] sIndex = new int[26];
+        for (int i = 0; i < t.length(); i++) {
+            sIndex[s.charAt(i) - 'a']++;
+            sIndex[t.charAt(i) - 'a']--;
+        }
+        for (int i = 0; i < 26; i++) {
+            if (sIndex[i] != 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+    // 排序玩，比较是否相同，相同表示一样，速度最快
+    public boolean isAnagram3(String s, String t) {
+        char[] charS = s.toCharArray();
+        char[] charT = t.toCharArray();
+        Arrays.sort(charS);
+        Arrays.sort(charT);
+        return new String(charS).equals(new String(charT));
+    }
+    // 791. 自定义字符串排序
+    public String customSortString(String S, String T) {
+        StringBuilder sb = new StringBuilder();
+        int[] count = new int[26];
+        for (int i = 0; i < T.length(); i++) {
+            count[T.charAt(i) - 'a']++;
+        }
+        for (int i = 0; i < S.length(); i++) {
+            if (count[S.charAt(i) - 'a'] > 0) {
+                for (int j = 0; j < count[S.charAt(i) - 'a']; j++) {
+                    sb.append(S.charAt(i));
+
+                }
+                count[S.charAt(i) - 'a'] = 0;
+            }
+        }
+
+        for (int i = 0; i < T.length(); i++) {
+            if (count[T.charAt(i) - 'a'] > 0) {
+                sb.append(T.charAt(i));
+            }
+        }
+        return sb.toString();
+    }
 }

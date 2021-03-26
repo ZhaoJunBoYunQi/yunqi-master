@@ -83,7 +83,7 @@ public class Array<E> {
         return ret;
     }
     public E removeFirst() {
-        return remove(0);
+        return  5 (0);
     }
     public E removeLast() {
         return remove(size - 1);
