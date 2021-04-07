@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 public class Main {
 
 
@@ -32,9 +34,11 @@ public class Main {
                 read();
             }
         }.start();
+
+        HashMap<Integer,Integer> map = new HashMap();
+     
+
     }
 
-    private static class ss{}
-
-
+  
 }
